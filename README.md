@@ -59,8 +59,8 @@ Proporciona herramientas para la gestión de espacios de trabajo, escribir, desp
 
 ### Estrategia de automatización
 ---
-Inicialmente se levantaron los flujos de cada transacción, para conocer el negocio y tener claro que se debia automatizar.
-Una vez claro el alcance se procede con la automatización de las transacciones, para esto se decide automatizar por capas front y base de datos.
+Inicialmente se levantaro el flujo al proceso asignado , para conocer acerca del proceso y tener claro que se debia automatizar.
+Una vez claro el alcance se procede con la automatización.
 
 ## Requerimientos
 
