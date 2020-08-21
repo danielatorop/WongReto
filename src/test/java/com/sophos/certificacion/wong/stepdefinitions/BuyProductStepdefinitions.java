@@ -38,13 +38,13 @@ public class BuyProductStepdefinitions {
         theActorInTheSpotlight().wasAbleTo(OpenPage.to(Options.PAGE));
     }
 
-    @When("^the search and chooses the product$")
-    public void theSearchAndChoosesTheProduct(List<Map<String, String>> data) {
+    @When("^the actor search and chooses the product$")
+    public void theActorSearchAndChoosesTheProduct(List<Map<String, String>> data) {
         theActorInTheSpotlight().attemptsTo(SearchProduct.search(data));
 
     }
-    @Then("^should validate the purchase of his product$")
-    public void shouldValidateThePurchaseOfHisProduct(List<Map<String, String>> data) {
+    @Then("^the actor must validate the product chosen for the purchase$")
+    public void theActorMustValidateTheProductChosenForThePurchase(List<Map<String, String>> data) {
           theActorInTheSpotlight().should(seeThat(BuyProduct.succes(data)).orComplainWith(AssertionError.class , EMPTY_CAR));
     }
 }

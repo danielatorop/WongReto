@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Search products with different categories" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-21T00:38:40" hostname="DESKTOP-S5BRHJP" time="315.261">
+<testsuite name="Search products with different categories" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-21T01:22:13" hostname="DESKTOP-S5BRHJP" time="314.442">
   <properties/>
-  <testcase name="Find Meat Products" classname="Search products with different categories" time="315.261"/>
+  <testcase name="Find Meat Products" classname="Search products with different categories" time="314.442"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[ago 20, 2020 7:38:43 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[ago 20, 2020 8:22:19 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito,--start-maximiz..., goog:chromeOptions: {args: [--incognito, --start-maximized, --lang=es, --disable-download-notifica..., --test-type, --ignore-certificate-errors, --allow-running-insecure-co..., --disable-translate, --always-authorize-plugins, --disable-extensions, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
-Starting ChromeDriver 84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}) on port 25637
+Starting ChromeDriver 84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}) on port 6464
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-ago 20, 2020 7:39:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ago 20, 2020 8:22:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
