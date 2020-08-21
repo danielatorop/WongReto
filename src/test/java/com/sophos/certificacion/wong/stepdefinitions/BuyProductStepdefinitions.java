@@ -1,6 +1,6 @@
 package com.sophos.certificacion.wong.stepdefinitions;
 
-import com.sophos.certificacion.wong.exceptions.ApplicationException;
+import com.sophos.certificacion.wong.exceptions.AssertionError;
 import com.sophos.certificacion.wong.questions.BuyProduct;
 import com.sophos.certificacion.wong.tasks.OpenPage;
 import com.sophos.certificacion.wong.tasks.SearchProduct;
@@ -17,7 +17,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.List;
 import java.util.Map;
 
-import static com.sophos.certificacion.wong.exceptions.ApplicationException.EMPTY_CAR;
+import static com.sophos.certificacion.wong.exceptions.AssertionError.EMPTY_CAR;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -38,14 +38,13 @@ public class BuyProductStepdefinitions {
         theActorInTheSpotlight().wasAbleTo(OpenPage.to(Options.PAGE));
     }
 
-    @When("^the search and chooses the product$")
-    public void theSearchAndChoosesTheProduct(List<Map<String, String>> data) {
+    @When("^the actor search and chooses the product$")
+    public void theActorSearchAndChoosesTheProduct(List<Map<String, String>> data) {
         theActorInTheSpotlight().attemptsTo(SearchProduct.search(data));
 
     }
-    @Then("^should validate the purchase of his product$")
-    public void shouldValidateThePurchaseOfHisProduct() {
-          theActorInTheSpotlight().should(seeThat(BuyProduct.succes()).orComplainWith(ApplicationException.class , EMPTY_CAR));
+    @Then("^the actor must validate the product chosen for the purchase$")
+    public void theActorMustValidateTheProductChosenForThePurchase(List<Map<String, String>> data) {
+          theActorInTheSpotlight().should(seeThat(BuyProduct.succes(data)).orComplainWith(AssertionError.class , EMPTY_CAR));
     }
-
 }

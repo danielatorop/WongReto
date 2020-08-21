@@ -1,8 +1,7 @@
 package com.sophos.certificacion.wong.utils;
 
 public enum DataRememberEnum {
-    NAME_PRODUCT("nameproduct"),
-    NAME_PRODUCTNUEVO("nameproduct");
+    NAME_PRODUCT("nameproduct");
 
     private final String value;
 

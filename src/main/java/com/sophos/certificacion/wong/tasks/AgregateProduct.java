@@ -1,21 +1,15 @@
 package com.sophos.certificacion.wong.tasks;
 
-import com.sophos.certificacion.wong.exceptions.ApplicationException;
 import com.sophos.certificacion.wong.interactions.CloseUi;
 import com.sophos.certificacion.wong.interactions.WaitUntilAppear;
-import com.sophos.certificacion.wong.interfaces.HomePage;
 import com.sophos.certificacion.wong.interfaces.HomePageProduct;
-import com.sophos.certificacion.wong.utils.DataRememberEnum;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 
-import java.util.List;
-import java.util.Map;
-
-import static com.sophos.certificacion.wong.exceptions.ApplicationException.EMPTY_CAR;
+import static com.sophos.certificacion.wong.exceptions.AssertionError.EMPTY_CAR;
 
 public class AgregateProduct implements Task {
 
@@ -28,7 +22,7 @@ public class AgregateProduct implements Task {
             actor.attemptsTo(WaitUntilAppear.theTarget(HomePageProduct.SEE_MY_CART));
             actor.attemptsTo(Click.on(HomePageProduct.SEE_MY_CART));
         } else {
-            throw new ApplicationException(EMPTY_CAR);
+            throw new AssertionError(EMPTY_CAR);
         }
     }
     public static Performable pay(){
