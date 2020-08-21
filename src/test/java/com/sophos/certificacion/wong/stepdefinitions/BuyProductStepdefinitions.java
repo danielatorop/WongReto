@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.sophos.certificacion.wong.exceptions.AssertionError.EMPTY_CAR;
+import static com.sophos.certificacion.wong.exceptions.AssertionError.NAME_SEARCHED_DOES_NOT_MATCH;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -45,6 +46,6 @@ public class BuyProductStepdefinitions {
     }
     @Then("^the actor must validate the product chosen for the purchase$")
     public void theActorMustValidateTheProductChosenForThePurchase(List<Map<String, String>> data) {
-          theActorInTheSpotlight().should(seeThat(BuyProduct.succes(data)).orComplainWith(AssertionError.class , EMPTY_CAR));
+          theActorInTheSpotlight().should(seeThat(BuyProduct.succes(data)).orComplainWith(AssertionError.class , NAME_SEARCHED_DOES_NOT_MATCH));
     }
 }
