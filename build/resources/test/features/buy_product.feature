@@ -7,3 +7,5 @@ Feature:Search products with different categories
       | type product |name product|
       | Carnes  |Corazón de Cuadril Argentino Tierra del Fuego x kg|
     Then should validate the purchase of his product
+      |name product result|
+      |Corazón de Cuadril Argentino Tierra del Fuego x kg|
