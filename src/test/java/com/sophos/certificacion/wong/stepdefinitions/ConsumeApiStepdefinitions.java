@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 
-import static com.sophos.certificacion.wong.exceptions.AssertionError.NAME_SEARCHED_DOES_NOT_MATCH;
+import static com.sophos.certificacion.wong.exceptions.AssertionError.NAME_SEARCHED_DOES_NOT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
@@ -38,6 +38,6 @@ public class ConsumeApiStepdefinitions {
     }
     @Then("^The API should return$")
     public void theAPIShouldReturn(List<Map<String, String>> data) {
-        OnStage.theActorInTheSpotlight().should(seeThat(CosumeApiSucces.succes(data)).orComplainWith(AssertionError.class, NAME_SEARCHED_DOES_NOT_MATCH));
+        OnStage.theActorInTheSpotlight().should(seeThat(CosumeApiSucces.succes(data)).orComplainWith(AssertionError.class, NAME_SEARCHED_DOES_NOT));
     }
 }

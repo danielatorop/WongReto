@@ -23,7 +23,7 @@ public class CosumeApiSucces implements Question {
     @Override
     public Object answeredBy(Actor actor) {
         if (data.get(0).get("name").equals(name)){
-            System.out.println("dd");
+
         }
         return data.get(0).get("name").equals(name);
     }
