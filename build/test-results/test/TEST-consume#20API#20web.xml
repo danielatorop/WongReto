@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="consume API web" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-08-22T22:05:45" hostname="DESKTOP-S5BRHJP" time="27.485">
+<testsuite name="consume API web" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-08-22T22:51:23" hostname="DESKTOP-S5BRHJP" time="30.473">
   <properties/>
-  <testcase name="API health end-point" classname="consume API web" time="27.485">
+  <testcase name="API health end-point" classname="consume API web" time="30.473">
     <failure message="java.lang.AssertionError: AssertionError should have a constructor with the signature MyException(String message) and MyException(String message, Throwable cause)" type="java.lang.AssertionError">java.lang.AssertionError: AssertionError should have a constructor with the signature MyException(String message) and MyException(String message, Throwable cause)
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
@@ -10,9 +10,8 @@
 	at ✽.The API should return(src/test/resources/features/consume_api.feature:7)
 </failure>
   </testcase>
-  <system-out><![CDATA[{"name":"Cosista", "email":"s@gmail222.com" ,"gender":"Male", "status":"Active" }
-{"code":201,"data":{"gender":"Male","updated_at":"2020-08-23T03:35:54.042+05:30","name":"Cosista","created_at":"2020-08-23T03:35:54.042+05:30","id":1423,"email":"s@gmail222.com","status":"Active"},"meta":null}
-java.lang.IllegalArgumentException: Superclass has no null constructors but no arguments were given
+  <system-out><![CDATA[{"name":"Cosista", "email":"frr@gmail222.com" ,"gender":"Male", "status":"Active" }
+{"code":201,"data":{"gender":"Male","updated_at":"2020-08-23T04:21:33.287+05:30","name":"Cosista","created_at":"2020-08-23T04:21:33.287+05:30","id":1272,"email":"frr@gmail222.com","status":"Active"},"meta":null}
 ]]></system-out>
   <system-err><![CDATA[[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  

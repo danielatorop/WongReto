@@ -3,7 +3,7 @@ Feature:consume API web
     Given the API is running
     When I check the aplication status
       | name |email |gender|status|
-      | Cosista|s@gmail222.com| Male|Active|
+      | Cosista|frr@gmail222.com| Male|Active|
     Then The API should return
     |name|
     |Cosista|
