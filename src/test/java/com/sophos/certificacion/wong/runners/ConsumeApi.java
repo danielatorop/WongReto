@@ -1,4 +1,4 @@
-package com.sophos.certificacion.api.runners;
+package com.sophos.certificacion.wong.runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/consume_api.feature",
-        glue = "com.sophos.certificacion.api.stepdefinitions",
+        glue = "com.sophos.certificacion.wong.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
 public class ConsumeApi {

@@ -32,4 +32,7 @@ dependencies {
     compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '2.0.60'
     compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.39'
     testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.28'
+    compile group:'org.json',name:'json',version:'20190722'
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile group: 'net.serenity-bdd',name:'serenity-screenplay-rest',version:'2.0.60'
 }

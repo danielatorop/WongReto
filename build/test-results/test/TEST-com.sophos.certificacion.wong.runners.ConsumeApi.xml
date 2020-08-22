@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sophos.certificacion.wong.runners.BuyProduct" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-S5BRHJP" time="0.0">
+<testsuite name="com.sophos.certificacion.wong.runners.ConsumeApi" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-S5BRHJP" time="0.0">
   <properties/>
   <system-out><![CDATA[
-1 Scenarios (?[32m1 passed?[0m)
-3 Steps (?[32m3 passed?[0m)
-3m32,144s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/consume_api.feature:2 ?[0m# API health end-point
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[32m2 passed?[0m)
+0m29,615s
+
+java.lang.AssertionError: AssertionError should have a constructor with the signature MyException(String message) and MyException(String message, Throwable cause)
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:301)
+	at com.sophos.certificacion.wong.stepdefinitions.ConsumeApiStepdefinitions.theAPIShouldReturn(ConsumeApiStepdefinitions.java:41)
+	at ?.The API should return(src/test/resources/features/consume_api.feature:7)
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
@@ -24,7 +34,7 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Search products with different categories
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: consume API web
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
@@ -33,8 +43,8 @@
   |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
                                                                   
 
-TEST STARTED: Find Meat Products
--------------------------------------------------------------------(search-products-with-different-categories;find-meat-products)
+TEST STARTED: API health end-point
+-------------------------------------------------------------------(consume-api-web;api-health-end-point)
 [pool-2-thread-1] INFO net.thucydides.core.requirements.PackageRequirementsTagProvider - Loading requirements from package requirements at: com.sophos.certificacion.wong
 ]]></system-err>
 </testsuite>
