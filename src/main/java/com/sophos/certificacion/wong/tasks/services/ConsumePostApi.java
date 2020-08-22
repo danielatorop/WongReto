@@ -22,9 +22,11 @@ public class ConsumePostApi implements Task {
 
     private List<Map<String, String>> data;
     private String hash;
+    public String name;
 
-    public ConsumePostApi(String hash) {
+    public ConsumePostApi(String hash, String  name) {
         this.hash = hash;
+        this.name = name;
     }
 
     public ConsumePostApi(List<Map<String, String>> data) {
@@ -58,7 +60,7 @@ public class ConsumePostApi implements Task {
                 System.out.println(myResponse);
                 JSONObject myResponseA = (JSONObject) myResponse.get("data");
                 String hash = String.valueOf(myResponseA.get("id"));
-                actor.attemptsTo(ConsumeGetApi.get(hash));
+                actor.attemptsTo(ConsumeGetApi.get(hash,name));
 
             } else {
              }

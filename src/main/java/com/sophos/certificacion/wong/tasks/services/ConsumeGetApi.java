@@ -11,12 +11,18 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import org.json.JSONObject;
 
+import java.util.List;
+import java.util.Map;
+
 public class ConsumeGetApi implements Task {
 
-    private String hash;
 
-    public ConsumeGetApi(String hash) {
+    private String hash;
+    public String name;
+
+    public ConsumeGetApi(String hash, String name) {
         this.hash = hash;
+        this.name= name;
     }
 
     @Override
@@ -28,10 +34,9 @@ public class ConsumeGetApi implements Task {
         JSONObject myResponsebody = new JSONObject(api.asString());
         JSONObject myResponseget = (JSONObject) myResponsebody.get("data");
         String name = String.valueOf(myResponseget.get("name"));
-
     }
 
-    public static Performable get(String hash) {
-        return Tasks.instrumented(ConsumeGetApi.class);
+    public static Performable get(String hash, String name) {
+        return Tasks.instrumented(ConsumeGetApi.class, hash, name);
     }
 }
